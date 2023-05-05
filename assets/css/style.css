@@ -145,7 +145,7 @@ a {
     #46eefa,
     #5ffbf1
   );
-  transition: all 0.25s;
+  transition: all 0.5s;
 }
 
 .nav-link:hover::after {
