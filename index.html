@@ -348,7 +348,7 @@
             </section>
             <div class="about_us-avstract">
               <img src="./assets/imgs/Vector2641.svg" alt="Vector2641" />
-              <img src="./assets/imgs/Union1.svg" alt="Union" class="union" />
+              <img src="./assets/imgs/Union.svg" alt="Union" class="union" />
             </div>
           </figure>
           <article class="about_us-content">
@@ -407,7 +407,11 @@
                 <h1 class="process-step__name">Brainstormaing</h1>
               </div>
               <div class="process-desc">
-                <p>We customse a ensure aligment and difine key mileones and defiverables experience tells us the best solutions are the ones  deated with clients.</p>
+                <p>
+                  We customse a ensure aligment and difine key mileones and
+                  defiverables experience tells us the best solutions are the
+                  ones deated with clients.
+                </p>
               </div>
             </section>
             <!-- Process item -->
@@ -417,13 +421,105 @@
                 <h1 class="process-step__name">Execution</h1>
               </div>
               <div class="process-desc">
-                <p>We customse a ensure aligment and difine key mileones and defiverables experience tells us the best solutions are the ones  deated with clients.</p>
+                <p>
+                  We customse a ensure aligment and difine key mileones and
+                  defiverables experience tells us the best solutions are the
+                  ones deated with clients.
+                </p>
               </div>
             </section>
           </article>
-        </section>
+        </div>
+      </section>
+
+      <!-- Features -->
+      <section class="features">
+        <div class="container">
+          <div class="features-top">
+            <h3 class="features-heading">
+              A quick glance of our past projects
+            </h3>
+            <div class="features-desc">
+              <h2 class="feature-intro">
+                Are you strive for the fast project simplicity and clarity.
+                Great design is born of those two things.
+              </h2>
+              <div class="feature-browse">
+                <span class="feature-text"> Browse all Projects </span>
+                <svg
+                  class="arrow"
+                  width="22"
+                  height="13"
+                  viewBox="0 0 22 13"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M21 6.82353H0.999999M0.999999 6.82353L6.29412 1M0.999999 6.82353L6.29412 12"
+                    stroke="currentColor"
+                    stroke-width="1.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </div>
+            </div>
+          </div>
+          <div class="feature-video">
+            <div class="video" id="myVideo">
+              <video
+                onclick="pauseVideo()"
+                id="video"
+                width="100%"
+                autoplay
+                src="./assets/imgs/video.mp4"
+                type="video/mp4"
+              ></video>
+
+              <div class="play-btn" onclick="playVideo()">
+                <svg
+                  class="play"
+                  width="8"
+                  height="10"
+                  viewBox="0 0 8 10"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M7.48979 4.22586C8.15106 4.61996 8.13773 5.58212 7.4658 5.95775L1.49682 9.29454C0.824886 9.67017 -0.00170367 9.17755 0.00896126 8.40782L0.103701 1.57014C0.114366 0.800411 0.954285 0.330875 1.61555 0.724974L7.48979 4.22586Z"
+                    fill="currentColor"
+                  />
+                </svg>
+              </div>
+            </div>
+          </div>
+          <div class="feature-avstract">
+            <img src="./assets/imgs/Vector2642.svg" alt="Vector2642" />
+            <img src="./assets/imgs/Union.svg" alt="Union" class="union" />
+          </div>
         </div>
       </section>
     </main>
+
+    <!-- JS -->
+    <script>
+      let myVideo = document.getElementById("myVideo");
+      let video = document.getElementById("video");
+      let playBtn = document.querySelector(".feature-video .play-btn");
+
+      function pauseVideo() {
+        video.pause();
+        playBtn.classList.remove("hidden");
+      }
+
+      function playVideo() {
+        video.play();
+        playBtn.classList.add("hidden");
+      }
+
+      video.onended = function () {
+        playBtn.classList.remove("hidden");
+      };
+    </script>
   </body>
 </html>

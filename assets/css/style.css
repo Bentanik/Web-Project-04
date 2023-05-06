@@ -763,6 +763,7 @@ a {
   position: absolute;
   top: -9%;
   left: -8%;
+  transform: rotate(45deg);
 }
 
 /* Process ========== */
@@ -916,4 +917,133 @@ a {
 
 .process-item + .process-item {
   margin-top: 54px;
+}
+
+/* Features ========== */
+
+.features {
+  margin-top: 148px;
+  padding: 56px 0 63px;
+  background: var(--btn-color);
+}
+
+.features .container {
+  position: relative;
+}
+
+.features-top {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+}
+
+.features-heading {
+  position: relative;
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  font-size: 4.2rem;
+  line-height: 1.24;
+  color: #e7f9f9;
+}
+
+.features-heading::after {
+  position: absolute;
+  top: 75%;
+  left: 61%;
+  transform: translateY(75%);
+  content: "";
+  background: #83a17d;
+  width: 66px;
+  height: 2px;
+}
+
+.features-desc {
+  max-width: 590px;
+  font-weight: 500;
+  font-size: 1.8rem;
+  line-height: 1.56;
+}
+
+.feature-intro {
+  color: #6a8383;
+}
+
+.feature-browse {
+  margin-top: 13px;
+  display: flex;
+  align-items: baseline;
+  color: #ffffff;
+}
+
+.feature-browse:hover {
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.feature-browse .arrow {
+  margin-left: 26px;
+  transform: matrix(-1, 0, 0, 1, 0, 0);
+  color: #80a07b;
+}
+
+/* Video */
+
+.feature-video {
+  margin-top: 65px;
+  position: relative;
+}
+
+.feature-video .video {
+  width: 100%;
+  z-index: 1;
+}
+
+.feature-video .video video {
+  border-radius: 20px;
+}
+
+.feature-video .video:focus {
+  outline: none;
+}
+
+.feature-video .play-btn {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 118px;
+  height: 118px;
+  background: rgba(0, 0, 0, 0.7);
+  border-radius: 50%;
+  transition: 0.2s;
+}
+
+.feature-video .play-btn .circle:hover {
+  background: rgba(0, 0, 0, 0.9);
+}
+
+.feature-video .play-btn .play {
+  width: 36px;
+  height: 36px;
+  color: #fff;
+}
+
+.feature-video .hidden {
+  display: none;
+}
+
+.feature-avstract {
+  position: absolute;
+  top: 0%;
+  right: -3%;
+}
+
+.feature-avstract .union {
+  position: absolute;
+  top: 21%;
+  left: 84%;
+  transform: rotate(20deg);
 }
