@@ -85,7 +85,7 @@
     <link rel="stylesheet" href="./assets/font/stylesheet.css" />
   </head>
   <body>
-    <header id="Home" class="header">
+    <header class="header header-nav">
       <div class="container">
         <!-- Navbar -->
         <div class="header__nav">
@@ -97,22 +97,26 @@
           </div>
           <ul class="nav-list">
             <li class="nav-item">
-              <a href="#!" class="nav-link nav-link__active">Home</a>
+              <a href="#" class="nav-link">Home</a>
             </li>
             <li class="nav-item">
-              <a href="#!" class="nav-link">About</a>
+              <a href="#about" class="nav-link">About</a>
             </li>
             <li class="nav-item">
-              <a href="#!" class="nav-link">Blog</a>
+              <a href="#blog" class="nav-link">Blog</a>
             </li>
             <li class="nav-item">
-              <a href="#!" class="nav-link">Contact</a>
+              <a href="#contact" class="nav-link">Contact</a>
             </li>
           </ul>
           <section class="action">
             <a href="#!" class="btn">Sign Up</a>
           </section>
         </div>
+      </div>
+    </header>
+    <header id="Home" class="header">
+      <div class="container">
         <!-- Hero -->
         <div class="hero">
           <div class="hero-content">
@@ -298,7 +302,7 @@
       </section>
 
       <!-- About us -->
-      <section class="about_us">
+      <section id="about" class="about_us">
         <div class="container">
           <figure class="images_list">
             <section class="image">
@@ -556,7 +560,7 @@
       </section>
 
       <!-- Blog -->
-      <section class="blog">
+      <section id="blog" class="blog">
         <div class="container">
           <div class="blog-top">
             <span class="blog-text">BLOG & ARTICLES</span>
@@ -612,7 +616,7 @@
     </main>
 
     <!-- Footer -->
-    <footer class="footer">
+    <footer id="contact" class="footer">
       <div class="container">
         <!-- Footer left -->
         <section class="footer-left">
@@ -779,6 +783,36 @@
     </footer>
     <!-- JS -->
     <script>
+      window.addEventListener("scroll", (event) => {
+        let scroll = this.scrollY;
+        let nav = document.querySelectorAll(".header-nav .nav-link");
+        nav.forEach(function (a) {
+          a.classList.remove("nav-link__active");
+        });
+        console.log(scroll);
+        if (scroll >= 6178) {
+          let a = document.querySelector(
+            ".header-nav .nav-item:last-child .nav-link"
+          );
+          a.classList.add("nav-link__active");
+        } else if (scroll >= 5459) {
+          let a = document.querySelector(
+            ".header-nav .nav-item:nth-child(3) .nav-link"
+          );
+          a.classList.add("nav-link__active");
+        } else if (scroll >= 1750) {
+          let a = document.querySelector(
+            ".header-nav .nav-item:nth-child(2) .nav-link"
+          );
+          a.classList.add("nav-link__active");
+        } else {
+          let a = document.querySelector(
+            ".header-nav .nav-item:first-child .nav-link"
+          );
+          a.classList.add("nav-link__active");
+        }
+      });
+
       let myVideo = document.getElementById("myVideo");
       let video = document.getElementById("video");
       let playBtn = document.querySelector(".feature-video .play-btn");
