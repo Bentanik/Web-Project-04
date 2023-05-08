@@ -1253,6 +1253,11 @@ a {
   border-color: #e2eddf;
 }
 
+.blog-item:hover .blog-act {
+  background: var(--btn-color);
+  color: #fff;
+}
+
 .blog-para {
   margin-top: 13px;
   font-weight: 600;
